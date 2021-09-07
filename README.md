@@ -7,7 +7,7 @@ A font that supports glyphs introduced in [Unicode version 13.0](https://unicode
 
 ## Effects
 
-At the moment there's currently a single effect included; One produced for [Thomas Vigoux](https://github.com/vigoux), as a thanks for all the work he's contributed to Neovim.
+At the moment there's only a single effect included; One produced for [Thomas Vigoux](https://github.com/vigoux)'s' Neovim stream introductions (and as a thanks for the work he's contributed to Neovim).
 
 I have a variety of other nearly-complete effects that I'll introduce when they have less rough edges.
 
