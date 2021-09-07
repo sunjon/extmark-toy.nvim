@@ -3,9 +3,12 @@
 Extmark Toy is a plugin created to house my experimental demos and games created in Neovim.
 The graphical effects are rasterized using Unicode font [Block Element](https://en.wikipedia.org/wiki/Block_elements) glyphs in combination with Neovim's extmarks.
 
-A font capable of certain glyphs introduced in [Unicode version 13.0](https://unicode.org/versions/Unicode13.0.0/) is required for some effects.
+A font that supports glyphs introduced in [Unicode version 13.0](https://unicode.org/versions/Unicode13.0.0/) is required for some effects.
 
-At the moment there's currently a single effect included, although I plan to introduce others that are WIP when they have less rough edges.
+At the moment there's currently a single effect included; One produced for [Thomas Vigoux](https://github.com/vigoux), as a thanks for all the work he's contributed to Neovim.
+
+I have a variety of other nearly-complete effects that I'll introduce when they have less rough edges.
+
 At some point I'd like to support user created effects, moving utilities used for effect creation and generic methods in current effects into API functions.
 
 ## Effects
