@@ -5,13 +5,13 @@ The graphical effects are rasterized using Unicode font [Block Element](https://
 
 A font that supports glyphs introduced in [Unicode version 13.0](https://unicode.org/versions/Unicode13.0.0/) is required for some effects.
 
+## Effects
+
 At the moment there's currently a single effect included; One produced for [Thomas Vigoux](https://github.com/vigoux), as a thanks for all the work he's contributed to Neovim.
 
 I have a variety of other nearly-complete effects that I'll introduce when they have less rough edges.
 
 At some point I'd like to support user created effects, moving utilities used for effect creation and generic methods in current effects into API functions.
-
-## Effects
 
 ### Vigoux Logo
 <img src="https://raw.githubusercontent.com/sunjon/images/master/extmark-toy.gif" alt="screenshot" width="800"/>
