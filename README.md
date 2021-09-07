@@ -11,7 +11,7 @@ At some point I'd like to support user created effects, moving utilities used fo
 ## Effects
 
 ### Vigoux Logo
-<img src="https://raw.githubusercontent.com/sunjon/images/master/shade_demo.gif" alt="screenshot" width="800"/>
+<img src="https://raw.githubusercontent.com/sunjon/images/master/extmark-toy.gif" alt="screenshot" width="800"/>
 
 Keys:
 `<Left>`  rotate palette left
