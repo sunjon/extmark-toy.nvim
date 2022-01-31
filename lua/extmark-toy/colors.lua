@@ -2,6 +2,8 @@ local api = vim.api
 
 local utils = require "extmark-toy.utils"
 
+DEFAULT_BG = 1710618
+
 local function rgb_split(hex_color)
   return {
     r = tonumber("0x" .. hex_color:sub(1, 2)),
@@ -28,7 +30,7 @@ local M = {}
 
 M.create_highlight_group_map = function(color_name, palette, max_brightness)
   -- get the user set background color
-  local bg_val = api.nvim_get_hl_by_name("Normal", true).background
+  local bg_val = api.nvim_get_hl_by_name("Normal", true).background or DEFAULT_BG
   local user_background = ("#%06x"):format(bg_val)
 
   --
