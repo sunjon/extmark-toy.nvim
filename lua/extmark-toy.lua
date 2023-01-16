@@ -1,3 +1,5 @@
+local api = vim.api
+api.nvim_create_augroup('extmark-toy.nvim', { clear = true })
 local UPDATE_INTERVAL = 1000/60
 local HIDE_CURSOR = true
 
@@ -21,7 +23,14 @@ M.start = function(opts)
   end
 
   vim.o.eventignore = "all" -- TODO: undo this on_close
-  vim.cmd[[ au! WinLeave * :lua.require'extmark-toy'.stop() ]]
+  api.nvim_create_autocmd({ 'WinLeave' }, {
+    group = 'extmark-toy.nvim',
+    pattern = '*',
+    callback = function ()
+      require('extmark-toy').stop()
+    end
+  })
+
 
   -- TODO: calculate delta-time here and pass single value to all coroutines
 
