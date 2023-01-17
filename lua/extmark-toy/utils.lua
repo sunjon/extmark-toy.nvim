@@ -39,13 +39,11 @@ function M.create_window(width, height, row, col)
   }
 
   local bufid = api.nvim_create_buf(false, true)
-  api.nvim_buf_set_keymap(
-    bufid,
-    "n",
-    "q",
-    "<Cmd>lua require'extmark-toy'.stop()<CR>",
-    { noremap = true, silent = true }
-  )
+  vim.keymap.set('n', 'q', function () require('extmark-toy').stop() end, { buffer = bufid, noremap = true, silent = true, })
+  vim.keymap.set('n', 'h', function () require('extmark-toy').stop() end, { buffer = bufid, noremap = true, silent = true, })
+  vim.keymap.set('n', 'j', function () require('extmark-toy').stop() end, { buffer = bufid, noremap = true, silent = true, })
+  vim.keymap.set('n', 'k', function () require('extmark-toy').stop() end, { buffer = bufid, noremap = true, silent = true, })
+  vim.keymap.set('n', 'l', function () require('extmark-toy').stop() end, { buffer = bufid, noremap = true, silent = true, })
 
   local winid = api.nvim_open_win(bufid, true, opts) -- enter window = true to set bufferlocal autocommands
 

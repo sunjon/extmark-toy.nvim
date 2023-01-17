@@ -104,7 +104,7 @@ M.init = function(opts)
   api.nvim_win_set_option(context.floatwin.winid, "winblend", 3)
 
   -- register color change key
-  M.nsid = vim.register_keystroke_callback(keystroke_callback, context.nsid)
+  M.nsid = vim.on_key(keystroke_callback, context.nsid)
 
   -- create exmarks and create map of objects, each extmark_obj containing a reference to the extmarkID, ascii character, it's position and brightness
   -- -----------------
@@ -229,7 +229,7 @@ end
 -- cleanup effect specific stuff
 M.on_close = function()
   -- unregister key callback
-  vim.register_keystroke_callback(nil, M.context.nsid)
+  vim.on_key(function () end, M.context.nsid)
   -- clear extmarks
   api.nvim_buf_clear_namespace(M.context.floatwin.bufid, M.context.nsid, 0, -1)
   -- remove logo buffer and its floating window
